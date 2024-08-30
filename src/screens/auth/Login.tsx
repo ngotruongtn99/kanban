@@ -32,14 +32,19 @@ const Login = () => {
             label="Email"
             rules={[{ required: true, message: "Please input your email!" }]}
           >
-            <Input type="email" allowClear maxLength={100} />
+            <Input
+              type="email"
+              allowClear
+              maxLength={100}
+              placeholder="Enter your email"
+            />
           </Form.Item>
           <Form.Item
             name={"password"}
             label="Password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
-            <Input.Password maxLength={100} />
+            <Input.Password maxLength={100} placeholder="Enter your password" />
           </Form.Item>
         </Form>
 
@@ -57,7 +62,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 mb-3">
           <Button
             onClick={() => form.submit()}
             type="primary"
@@ -68,7 +73,7 @@ const Login = () => {
           </Button>
         </div>
         <SocialLogin />
-        <div className="mt-4 text-center">
+        <div className="mt-3 text-center">
           <Space>
             <Text>Don't have an account?</Text>
             <Link to={"/sign-up"}>Sign up</Link>
